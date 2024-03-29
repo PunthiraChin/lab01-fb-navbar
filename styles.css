@@ -1,0 +1,94 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    background-color:rgb(237, 230, 230);
+    height:56px; 
+        /* ถ้าขนาดไม่เปลี่ยนแล้ว ให้กำหนดเป็น height ไปเลย แต่ถ้าขยายได้ ให้กำหนด min-height เอาไว้ */
+    display:flex;
+    justify-content:space-between;
+    padding-inline:8px;
+}
+
+nav.left{
+    border: 1px dashed red;
+    width:320px; 
+         /* ถ้าอยากให้ความกว้าง fix ไว้ตลอด ก็กำหนด width ไปเลย เช่น กรณีนี้ เราทำ serch box ที่ไม่อยากให้ความยาวมันเกินไปตามคำที่ user กรอก */
+    display:flex;
+    gap:8px;
+    align-items:center;
+}
+nav.left input{
+    height:40px;
+    border:none;
+    border-radius:20px;
+    padding-inline:16px;
+    font-size:16px;
+    flex-grow:1;  
+    /* กำหนด flex-grow ให้กับ searchbox เพื่อให้ searchbox ขยายไปเต็ม flexbox พอดี */
+}
+nav.center{
+    border: 1px dashed red;
+    display:flex;
+    align-items:center;
+    flex-grow:1;
+    justify-content:center;
+    gap:8px;
+}
+nav.center .box-icon{
+    width:129px;
+    height:100%;
+    background-color:white;
+    border-radius: 8px;
+    /* เนื่องจากกล่องนี้ไม่หดขยายตาม display size เลยกำหนด width ไปเลย */
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+nav.center .box-icon:hover{
+    background-color:#eee;
+}
+
+nav.right{
+    border: 1px dashed red;
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+    gap:8px;
+}
+
+nav.right .round-icon{
+    width:40px;
+    height:40px;
+    background-color:grey;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius: 50%;
+}
+
+.main-wrapper {
+    background-color: #eee;
+    min-height:100vh;
+    display:flex;
+    justify-content:space-between;
+}
+.sidebar-left{
+    border:1px dashed red;
+    min-height:100vh;
+    flex-basis:360px;
+}
+.news-feed{
+    border:1px dashed red;
+    min-height:100vh;
+    flex-basis:680px;
+}
+
+.sidebar-right{
+    border:1px dashed red;
+    min-height:100vh;
+    flex-basis:360px;
+}
