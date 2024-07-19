@@ -1,94 +1,74 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f2f5;
 }
 
-header{
-    background-color:rgb(237, 230, 230);
-    height:56px; 
-        /* ถ้าขนาดไม่เปลี่ยนแล้ว ให้กำหนดเป็น height ไปเลย แต่ถ้าขยายได้ ให้กำหนด min-height เอาไว้ */
-    display:flex;
-    justify-content:space-between;
-    padding-inline:8px;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
 }
 
-nav.left{
-    border: 1px dashed red;
-    width:320px; 
-         /* ถ้าอยากให้ความกว้าง fix ไว้ตลอด ก็กำหนด width ไปเลย เช่น กรณีนี้ เราทำ serch box ที่ไม่อยากให้ความยาวมันเกินไปตามคำที่ user กรอก */
-    display:flex;
-    gap:8px;
-    align-items:center;
-}
-nav.left input{
-    height:40px;
-    border:none;
-    border-radius:20px;
-    padding-inline:16px;
-    font-size:16px;
-    flex-grow:1;  
-    /* กำหนด flex-grow ให้กับ searchbox เพื่อให้ searchbox ขยายไปเต็ม flexbox พอดี */
-}
-nav.center{
-    border: 1px dashed red;
-    display:flex;
-    align-items:center;
-    flex-grow:1;
-    justify-content:center;
-    gap:8px;
-}
-nav.center .box-icon{
-    width:129px;
-    height:100%;
-    background-color:white;
-    border-radius: 8px;
-    /* เนื่องจากกล่องนี้ไม่หดขยายตาม display size เลยกำหนด width ไปเลย */
-    display:flex;
-    justify-content:center;
-    align-items:center;
-}
-nav.center .box-icon:hover{
-    background-color:#eee;
+.navbar-left {
+  display: flex;
+  align-items: center;
 }
 
-nav.right{
-    border: 1px dashed red;
-    display:flex;
-    justify-content:flex-end;
-    align-items:center;
-    gap:8px;
+.logo {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
 }
 
-nav.right .round-icon{
-    width:40px;
-    height:40px;
-    background-color:grey;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    border-radius: 50%;
+.search-bar {
+  border: none;
+  padding: 8px;
+  border-radius: 20px;
+  background-color: #f0f2f5;
+  outline: none;
+  width: 200px;
 }
 
-.main-wrapper {
-    background-color: #eee;
-    min-height:100vh;
-    display:flex;
-    justify-content:space-between;
-}
-.sidebar-left{
-    border:1px dashed red;
-    min-height:100vh;
-    flex-basis:360px;
-}
-.news-feed{
-    border:1px dashed red;
-    min-height:100vh;
-    flex-basis:680px;
+.navbar-center {
+  display: flex;
 }
 
-.sidebar-right{
-    border:1px dashed red;
-    min-height:100vh;
-    flex-basis:360px;
+.nav-item {
+  margin: 0 15px;
+  position: relative;
+  padding-inline: 12px;
+}
+
+.nav-item img {
+  width: 24px;
+  height: 24px;
+}
+
+.notification-dot {
+  width: 8px;
+  height: 8px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  top: -2px;
+  right: -2px;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.profile-pic img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
 }
